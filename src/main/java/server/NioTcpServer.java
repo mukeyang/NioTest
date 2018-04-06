@@ -41,9 +41,9 @@ public class NioTcpServer {
                 if (selectionKey.isReadable()) {
                     SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
                     socketChannel.socket().setReceiveBufferSize(102400);
-                    processByHead(socketChannel);
+//                    processByHead(socketChannel);
 //                    processByFixLength(socketChannel);
-//                    processNormally(socketChannel);
+                    processNormally(socketChannel);
 
                 }
                 iterator.remove();

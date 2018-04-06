@@ -1,7 +1,5 @@
 package client;
 
-import utils.PacketWrapper;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -76,9 +74,9 @@ public class NioClient {
                     // send the message continuously
 //                    String msg = "hello world " + number++;
                     // send data normally
-//                    socketChannel.write(ByteBuffer.wrap(msg.getBytes()));
+                    socketChannel.write(ByteBuffer.wrap(msg.getBytes()));
                     // add the head represent the data length
-                    socketChannel.write(ByteBuffer.wrap(new PacketWrapper(msg).getBytes()));
+//                    socketChannel.write(ByteBuffer.wrap(new PacketWrapper(msg).getBytes()));
                     // make the data length fixed
 //                    socketChannel.write(ByteBuffer.wrap(new FixLengthWrapper(msg).getBytes()));
 //                    System.out.println(number);
