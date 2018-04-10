@@ -28,7 +28,7 @@ public class DiscardServer {
                     childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast(new TimeEncode(),new TimeServerHandler());
+                            socketChannel.pipeline().addLast(new TimeServerHandler(),new TimeEncode());
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128).childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture sync = b.bind(port).sync();

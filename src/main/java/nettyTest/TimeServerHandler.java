@@ -19,7 +19,7 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
 //            }
 //        });
 //        channelFuture.addListener(ChannelFutureListener.CLOSE);
-        ctx.writeAndFlush(new UnixTime()).addListener(ChannelFutureListener.CLOSE);
+        ctx.channel().writeAndFlush(new UnixTime()).addListener(ChannelFutureListener.CLOSE);
     }
 
     @Override
