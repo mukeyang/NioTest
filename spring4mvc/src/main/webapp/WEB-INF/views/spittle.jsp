@@ -13,9 +13,9 @@
     <title>spittles</title>
 </head>
 <body>
-<%
-    System.out.println("123124");
-%>
+<%--<%--%>
+    <%--System.out.println("123124");--%>
+<%--%>--%>
 <label>hh</label>
 <c:forEach items="${list}" var="spittle">
     <label value="spittle_<c:out value="spittle.id"/>">"spittle_<c:out value="${spittle.id}"/>"</label>

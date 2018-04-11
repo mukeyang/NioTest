@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>welcome to spring mvc</h1>
-<a href="/spittles">home</a>
-<a href="register">register</a>
+<a href="/spittles/5">home</a>
+<a href="/spittles/register">register</a>
 </body>
 </html>
